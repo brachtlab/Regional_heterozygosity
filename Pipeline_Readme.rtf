@@ -1,0 +1,26 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww14240\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+For Alternate genome assembly:\
+\
+./parse_genes2.py <PANTHER_enrichment_file_for_GO_category> <PantherScore_generic_mapping_file> <genome_gene_coordinates_file>\
+\
+parse_genes2.py produces the genomic locations from the assembly for analysis with:\
+\
+./get_regional_heterozygosity.py <output_from_parse_genes2.py> <vcf_file>\
+\
+ \
+for Reference assembly:\
+\
+parse_genes2.py \'97>extract_regions.py\'97>blastn against reference assembly, 98% identity as pid cutoff, outfmt 6\'97>\
+\'97>reference_get_regional_heterozygosity.py <outfmt 6> <creference.vcf>\
+\
+for depth: use ./get_regional_depth2.py <genome_gene_coordinates_file> <depthfile.txt>\
+#note, depthfile is output by Samtools Depth command#\
+\
+for reference depth: ./reference_get_regional_depth2.py <blast-to-reference-outfmt6.txt> <reference_depthfile.txt>\
+#note, depthfile is output by Samtools Depth command#}
