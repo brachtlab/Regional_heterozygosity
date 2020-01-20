@@ -1,7 +1,7 @@
 # Regional_heterozygosity
 Repository of custom python scripts used in "Regional sequence expansion or collapse in heterozygous genome assemblies", Asalone et al. 2020.
 
-****for heterozygosity
+****for heterozygosity*****
 
 For Alternate genome assembly:
 
@@ -18,7 +18,7 @@ parse_genes2.py —>extract_regions.py—>blastn against reference assembly, 98%
 —>reference_get_regional_heterozygosity.py <outfmt 6> <creference.vcf>
 
 
-****for depth of coverage
+****for depth of coverage****
 
 for Alternate assembly depth: use ./get_regional_depth2.py <genome_gene_coordinates_file> <depthfile.txt>
 #note, depthfile is output by Samtools Depth command#
@@ -26,7 +26,7 @@ for Alternate assembly depth: use ./get_regional_depth2.py <genome_gene_coordina
 for Reference assembly depth: ./reference_get_regional_depth2.py <blast-to-reference-outfmt6.txt> <reference_depthfile.txt>
 #note, depthfile is output by Samtools Depth command#
 
-****for length of coverage
+****for length of coverage****
 
 For Alternate assemblies, get_regional_depth2.py records lengths covered
 
