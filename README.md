@@ -1,8 +1,6 @@
 # Regional_heterozygosity
 Repository of custom python scripts used in "Regional sequence expansion or collapse in heterozygous genome assemblies", Asalone et al. 2020.
 
-blast_analysis.py calculates how much of the query length (Alternative assembly) matched to the subject length (Reference assembly) at a defined percent identity threshold:
-./blast_analysis.py <query fasta> <blast_to_reference_outfmt6.txt> <percent identity to consider, as integer (like '98' for 98 %)>
 
 extract_regions.py extracts defined regions (regions_to_extract_file.txt) from assembly of interest:
 ./extract_regions.py <genome.fasta> <regions_to_extract_file.txt>
