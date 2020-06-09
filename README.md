@@ -89,7 +89,7 @@ For Alternate assemblies, get_regional_depth2.py records lengths covered
 
 For Reference lengths, run ref_len_covered_fixed.py 
 
-***for OrthoMCL analysis of fragmentation vs duplication *****
+****for OrthoMCL analysis of fragmentation vs duplication ****
 
 Start with OrthoMCL's all-vs-all non-redundant tabular blast output. getRef.py is used to extract only the lines whose query starts with 'ref' for reference. This creates a new blast output file which is used for the next step.
 
