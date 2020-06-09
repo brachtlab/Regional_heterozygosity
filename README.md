@@ -1,6 +1,9 @@
 # Regional_heterozygosity
 Repository of custom python scripts used in "Regional sequence expansion or collapse in heterozygous genome assemblies", Asalone et al. 2020.
 
+blast_analysis.py can create a file with a new percent identity cut off from a previous BLAST output. Can also be used to determine the percent missing from query fasta based on matches:
+./blast_analysis.py <query fasta> <blast_to_reference_outfmt6.txt> <percent identity to consider, as integer (like '98' for 98 %)>
+
 
 extract_regions.py extracts defined regions (regions_to_extract_file.txt) from assembly of interest:
 ./extract_regions.py <genome.fasta> <regions_to_extract_file.txt>
@@ -24,12 +27,20 @@ get_total_reference_depth2.py outputs the total depth for the reference assembly
 #note, depthfile is output by Samtools Depth command#
 
 
-length_missing_last.py uses LAST comparison of Alternate to Reference assembly to determine the percent of sequence missing from the Alternate assembly:
-./length_missing_last.py <reference.fasta> <last_output_of_alternate.txt>
+getN50.py is used to obtain the N50 of an assembly along with the length of the shortest contig, longest contig, total genome, and number of contigs in the assembly:
+./getN50.py <genome.fasta>
+
+
+getRef.py creates a file with BLAST output outformat 6 lines where the reference is the query: 
+getRef.py <outfmt 6> 
 
 
 parse_genes2.py produces the genomic locations from the assembly:
 ./parse_genes2.py <PANTHER_enrichment_file_for_GO_category> <PantherScore_generic_mapping_file> <genome_gene_coordinates_file>
+
+
+parseOrthoMCL.py extracts position of matches to the reference proteins from the all-vs-all BLAST for OrthoMCL:
+./parseOrthoMCL.py <output from getRef.py>
 
 
 ref_len_covered_fixed.py extracts the length covered from the Reference assembly: 
@@ -44,6 +55,10 @@ reference_get_regional_depth2.py extracts regional depth for the Reference assem
 
 reference_get_regional_heterozygosity.py calculates the regional heterozygosity of the reference assembly for region defined from the Alternative assembly:
 ./reference_get_regional_heterozygosity.py <outfmt6 from blast of subject assembly to omega> <vcf>
+
+
+rm_blast_redundancy.py removes duplicate hits from BLAST outformat 6 output:
+./rm_blast_redundancy.py <output from blast in outfmt 6>
 
 
 
